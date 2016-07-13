@@ -40,7 +40,7 @@ public class TAGS extends CordovaPlugin {
 		    
     }
 	
-	@Override
+	
 	public void onResume() {
 
 		super.onResume();
@@ -53,7 +53,7 @@ public class TAGS extends CordovaPlugin {
 	
 	}
 	
-	@Override
+	
 	public void onPause() {
 		
 		super.onPause();
