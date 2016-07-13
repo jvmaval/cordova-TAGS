@@ -8,6 +8,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.util.Log;
 
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.nfc.NfcAdapter;
+import android.nfc.NfcManager;
+import android.nfc.Tag;
+import android.nfc.tech.NfcA;
+import android.nfc.tech.NfcV;
+
 
 public class TAGS extends CordovaPlugin {
 	
