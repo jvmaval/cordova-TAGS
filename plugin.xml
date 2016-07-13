@@ -18,5 +18,9 @@
 
 		<source-file src="src/android/TAGS.java" target-dir="src/com/maval/plugin/"/>
   </platform>
+  
+  <config-file target="AndroidManifest.xml" parent="/manifest">
+		<uses-permission android:name="android.permission.NFC" />
+  </config-file>
 
 </plugin>
