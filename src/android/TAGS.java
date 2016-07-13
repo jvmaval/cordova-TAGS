@@ -27,19 +27,13 @@ public class TAGS extends CordovaPlugin {
 			callbackContext.error("Expected one non-empty string argument.");
 		}
 	}
-	/*
+	
 	@Override
     protected void onNewIntent(Intent intent){
         Log.w("myApp", "PROCESSING INTENT");
         
-		Log.w("myApp", "onNewIntent: " + intent);
-		String actn = intent.getAction();
-        
-		PluginResult result = new PluginResult(PluginResult.Status.OK, info);
-		result.setKeepCallback(true);
-		this.onYourCallback.sendPluginResult(result);
     }
-	*/
+	
 	
 	
 }
