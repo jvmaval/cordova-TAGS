@@ -12,11 +12,11 @@
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
 		  <feature name="TAGS">
-			<param name="android-package" value="org.apache.cordova.plugin.TAGS"/>
+			<param name="android-package" value="com.maval.plugin.tags.Tags"/>
 		  </feature>
 		</config-file>
 
-		<source-file src="src/android/TAGS.java" target-dir="src/com/maval/plugin/"/>
+		<source-file src="src/android/TAGS.java" target-dir="src/com/maval/plugin/tags"/>
   </platform>
   
   <config-file target="AndroidManifest.xml" parent="/manifest">
