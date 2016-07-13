@@ -8,6 +8,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.util.Log;
 
+
+import android.app.Activity;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.nfc.NfcAdapter;
@@ -34,7 +37,34 @@ public class TAGS extends CordovaPlugin {
     public void onNewIntent(Intent intent){
 		super.onNewIntent(intent);
         Log.w("myApp", "PROCESSING INTENT");
-        
+		    
+    }
+	
+	@Override
+	public void onResume() {
+
+		super.onResume();
+	
+		Activity currentAct = this.cordova.getActivity();
+		Intent intent = new Intent(currentAct, activity.getClass());
+        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP| Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        pendingIntent = PendingIntent.getActivity(currentAct, 0, intent, 0);		
+		NfcAdapter.getDefaultAdapter(currentAct).enableForegroundDispatch(currentAct, pendingIntent , null, null);
+	
+	}
+	
+	@Override
+	public void onPause() {
+		
+		super.onPause();
+		Activity currentAct = this.cordova.getActivity();		
+		NfcAdapter.getDefaultAdapter(currentAct).disableForegroundDispatch(currentAct);
+    
+	}
+	
+	
+	private Activity getActivity() {
+        return this.cordova.getActivity();
     }
 	
 	
