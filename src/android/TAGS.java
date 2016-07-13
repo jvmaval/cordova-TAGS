@@ -41,9 +41,9 @@ public class TAGS extends CordovaPlugin {
     }
 	
 	
-	public void onResume() {
+	public void onResume(boolean multitasking) {
 
-		super.onResume();
+		super.onResume(multitasking);
 	
 		Activity currentAct = this.cordova.getActivity();
 		Intent intent = new Intent(currentAct, activity.getClass());
@@ -54,9 +54,9 @@ public class TAGS extends CordovaPlugin {
 	}
 	
 	
-	public void onPause() {
+	public void onPause(boolean multitasking) {
 		
-		super.onPause();
+		super.onPause(multitasking);
 		Activity currentAct = this.cordova.getActivity();		
 		NfcAdapter.getDefaultAdapter(currentAct).disableForegroundDispatch(currentAct);
     
