@@ -1,43 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin>
 
-  <name>Hello</name>
+  <name>NXP SLI TAG READER</name>
+	<description>Cordova plugin for reading iso 15693 NXP SLI Tags</description>
+    <license>Apache 2.0</license>
+	<keywords>cordova,nfc,iso 15693</keywords>
+	<js-module src="www/TAGS.js" name="TAGS"> 
+		<clobbers target="TAGS"/>
+	</js-module>
+	
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+		  <feature name="TAGS">
+			<param name="android-package" value="org.apache.cordova.plugin.TAGS"/>
+		  </feature>
+		</config-file>
 
-  <engines>
-    <engine name="cordova" version=">=3.4.0"/>
-  </engines>
-
-  <asset src="www/hello.js" target="js/hello.js"/>
-
-  <js-module src="www/hello.js" name="hello">
-    <clobbers target="hello" />
-  </js-module>
-
-  <platform name="android">
-
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="Hello">
-        <param name="android-package" value="com.example.plugin.Hello"/>
-      </feature>
-    </config-file>
-
-    <source-file src="src/android/Hello.java" target-dir="src/com/example/plugin/"/>
-  </platform>
-
-  <platform name="ios">
-    
-    <config-file target="config.xml" parent="/widget">
-      <feature name="Hello">
-        <param name="ios-package" value="HWPHello" />
-      </feature>
-    </config-file>
-
-    <header-file src="src/ios/HWPHello.h" target-dir="HelloPlugin"/>
-    <source-file src="src/ios/HWPHello.m" target-dir="HelloPlugin"/>
-  </platform>
-
-  <platform name="wp7">
-    <source-file src="src/wp7/Hello.cs"/>
+		<source-file src="src/android/TAGS.java" target-dir="src/com/maval/plugin/"/>
   </platform>
 
 </plugin>
