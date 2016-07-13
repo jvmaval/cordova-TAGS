@@ -21,12 +21,18 @@
   
   <config-file target="AndroidManifest.xml" parent="/manifest">
 		<uses-permission android:name="android.permission.NFC" />
-		 <intent-filter>
-                <action android:name="android.nfc.action.TAG_DISCOVERED" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-         </intent-filter>
+		 
   </config-file>
+  
+  
+   <config-file target="AndroidManifest.xml" parent="/activity">
+	  <intent-filter>
+			<action android:name="android.nfc.action.TAG_DISCOVERED" />
+
+			<category android:name="android.intent.category.DEFAULT" />
+	  </intent-filter>
+   </config-file>
+   
   
    
 
