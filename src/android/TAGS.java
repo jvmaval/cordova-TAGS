@@ -40,20 +40,20 @@ public class TAGS extends CordovaPlugin {
 		    
     }
 	
-	
+	@Override
 	public void onResume(boolean multitasking) {
 
 		super.onResume(multitasking);
 	
 		Activity currentAct = this.cordova.getActivity();
-		Intent intent = new Intent(currentAct, activity.getClass());
+		Intent intent = new Intent(currentAct, getClass());
         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP| Intent.FLAG_ACTIVITY_CLEAR_TOP);
         pendingIntent = PendingIntent.getActivity(currentAct, 0, intent, 0);		
 		NfcAdapter.getDefaultAdapter(currentAct).enableForegroundDispatch(currentAct, pendingIntent , null, null);
 	
 	}
 	
-	
+	@Override
 	public void onPause(boolean multitasking) {
 		
 		super.onPause(multitasking);
