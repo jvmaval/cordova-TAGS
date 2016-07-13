@@ -23,7 +23,6 @@ public class TAGS extends CordovaPlugin {
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		if (action.equals("echo")) {
 			String message = args.getString(0);
-			this.echo(message, callbackContext);
 			return true;
 		}	
 		return false;
