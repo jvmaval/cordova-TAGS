@@ -17,6 +17,7 @@
 		<config-file target="res/xml/config.xml" parent="/*">
 		  <feature name="TAGS">
 			<param name="android-package" value="TAGS"/>
+			<param name="onload" value="true" />
 		  </feature>
 		</config-file>
 
@@ -36,6 +37,12 @@
 			<category android:name="android.intent.category.DEFAULT" />
 	  </intent-filter>
    </config-file>
+   
+  
+		
+
+   
+  
    
   
    
