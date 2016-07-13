@@ -19,13 +19,13 @@
 		<source-file src="src/android/TAGS.java" target-dir="src/com/maval/plugin/"/>
   </platform>
   
-  <config-file target="AndroidManifest.xml" parent="/manifest/*">
+  <config-file target="AndroidManifest.xml" parent="/manifest">
 		<uses-permission android:name="android.permission.NFC" />
 		 
   </config-file>
   
   
-   <config-file target="AndroidManifest.xml" parent="/*">
+   <config-file target="AndroidManifest.xml" parent="//activity">
 	  <intent-filter>
 			<action android:name="android.nfc.action.TAG_DISCOVERED" />
 
