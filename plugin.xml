@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin>
+<plugin id="cordova-TAGS">
 
   <name>NXP SLI TAG READER</name>
 	<description>Cordova plugin for reading iso 15693 NXP SLI Tags</description>
