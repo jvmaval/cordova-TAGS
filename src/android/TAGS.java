@@ -36,7 +36,6 @@ public class TAGS extends CordovaPlugin {
 	@Override
     public void onNewIntent(Intent intent){
 		super.onNewIntent(intent);
-		getActivity().setIntent(intent);
         Log.w("myApp", "PROCESSING INTENT");
 		    
     }
