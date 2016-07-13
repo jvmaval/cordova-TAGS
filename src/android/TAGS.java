@@ -24,7 +24,7 @@ public class TAGS extends CordovaPlugin {
 	
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-		if (action.equals("echo")) {
+		if (action.equals("readTAG")) {
 			String message = args.getString(0);
 			return true;
 		}	
@@ -36,6 +36,7 @@ public class TAGS extends CordovaPlugin {
 	@Override
     public void onNewIntent(Intent intent){
 		super.onNewIntent(intent);
+		getActivity().setIntent(intent);
         Log.w("myApp", "PROCESSING INTENT");
 		    
     }
