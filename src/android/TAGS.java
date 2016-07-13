@@ -29,19 +29,16 @@ public class TAGS extends CordovaPlugin {
 		return false;
 	}
 	
-	private void echo(String message, CallbackContext callbackContext) {
-		if (message != null && message.length() > 0) {
-			callbackContext.success(message);
-		} else {
-			callbackContext.error("Expected one non-empty string argument.");
-		}
-	}
+
 	
 	@Override
     public void onNewIntent(Intent intent){
+		super.onNewIntent(intent);
         Log.w("myApp", "PROCESSING INTENT");
         
     }
+	
+	
 	
 	
 	
