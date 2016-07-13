@@ -9,6 +9,11 @@
 	<description>Cordova plugin for reading iso 15693 NXP SLI Tags</description>
     <license>Apache 2.0</license>
 	<keywords>cordova,nfc,iso 15693</keywords>
+	
+	
+	<engines>
+      <engine name="cordova-android" version=">=4.0.0" />
+    </engines>
 	<js-module src="www/TAGS.js" name="TAGS"> 
 		<clobbers target="TAGS"/>
 	</js-module>
@@ -16,12 +21,12 @@
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
 		  <feature name="TAGS">
-			<param name="android-package" value="TAGS"/>
+			<param name="android-package" value="org.apache.cordova.tags.TAGS"/>
 			<param name="onload" value="true" />
 		  </feature>
 		</config-file>
 
-		<source-file src="src/android/TAGS.java" target-dir="src/plugins/tags"/>
+		<source-file src="src/android/TAGS.java" target-dir="src/org/apache/cordova/tags"/>
   </platform>
   
   <config-file target="AndroidManifest.xml" parent="/manifest">
