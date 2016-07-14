@@ -47,7 +47,7 @@ public class TAGS extends CordovaPlugin {
 		Log.w("myApp", "PROCESSING RESUME");
 		Activity currentAct = this.cordova.getActivity();
 		Intent intent = new Intent(currentAct, getClass());
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP| Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(currentAct, 0, intent, 0);		
 		NfcAdapter.getDefaultAdapter(currentAct).enableForegroundDispatch(currentAct, pendingIntent , null, null);
 		super.onResume(multitasking);
