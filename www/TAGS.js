@@ -1,2 +1,2 @@
 
-document.addEventListener("tagReceived",function(){alert("TAG Leido");});
+document.addEventListener("tagReceived",function(data){alert("TAG: "+data.response);});

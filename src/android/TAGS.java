@@ -137,7 +137,7 @@ public class TAGS extends CordovaPlugin {
 					//result.setKeepCallback(true);
 					//callbackContext.sendPluginResult(result);
 					
-					this.webView.loadUrl("javascript:cordova.fireDocumentEvent('tagReceived');");
+					this.webView.loadUrl("javascript:cordova.fireDocumentEvent('tagReceived',{tag:"+response+"});");
                 } catch (IOException e) {
                     e.printStackTrace();
                 } finally {
