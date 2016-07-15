@@ -138,7 +138,7 @@ public class TAGS extends CordovaPlugin {
 					//callbackContext.sendPluginResult(result);
 					
 					//this.loadUrl("javascript:cordova.fireDocumentEvent('volumeupbutton');");
-					
+					this.webView.loadUrl("javascript:cordova.fireDocumentEvent('volumeupbutton');");
                 } catch (IOException e) {
                     e.printStackTrace();
                 } finally {
