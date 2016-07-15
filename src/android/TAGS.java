@@ -51,7 +51,7 @@ public class TAGS extends CordovaPlugin {
 		NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(getActivity());
 		if (nfcAdapter != null) {
 			try {
-				nfcAdapter.enableForegroundDispatch(getActivity(), getPendingIntent(), getIntentFilters(), getTechLists());
+				nfcAdapter.enableForegroundDispatch(getActivity(), getPendingIntent(), null, null);
 			} catch (IllegalStateException e) {
 				// issue 110 - user exits app with home button while nfc is initializing
 				Log.w(TAG, "Illegal State Exception starting NFC. Assuming application is terminating.");
