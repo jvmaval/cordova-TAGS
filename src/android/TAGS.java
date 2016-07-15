@@ -111,7 +111,7 @@ public class TAGS extends CordovaPlugin {
         return pendingIntent;
     }
 	
-	public static void processNfcIntent(Intent intent){
+	public void processNfcIntent(Intent intent){
         Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
         if(tag != null){
             Log.w("myApp", "TAG NOT NULL");
