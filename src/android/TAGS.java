@@ -97,6 +97,10 @@ public class TAGS extends CordovaPlugin {
             pendingIntent = PendingIntent.getActivity(activity, 0, intent, 0);
         }
     }
+	
+	private PendingIntent getPendingIntent() {
+        return pendingIntent;
+    }
 		
 	
 }
