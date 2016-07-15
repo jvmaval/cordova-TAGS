@@ -18,6 +18,9 @@ import android.nfc.Tag;
 import android.nfc.tech.NfcA;
 import android.nfc.tech.NfcV;
 
+import java.io.IOException;
+import java.util.Arrays;
+
 
 public class TAGS extends CordovaPlugin {
 	
