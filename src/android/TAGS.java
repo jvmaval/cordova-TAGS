@@ -22,17 +22,22 @@ import java.io.IOException;
 import java.util.Arrays;
 
 
+
 public class TAGS extends CordovaPlugin {
 	
 	private PendingIntent pendingIntent = null;
+	private CallbackContext shareTagCallback;
   
 
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-		if (action.equals("readTAG")) {
+		Log.w("myApp", "is this ever reached?");
+		
+		/*if (action.equals("readTAG")) {
 			String message = args.getString(0);
 			return true;
-		}	
+		}*/
+		
 		return false;
 	}
 	
@@ -126,7 +131,14 @@ public class TAGS extends CordovaPlugin {
                 try {
                     tech.connect();
                     byte[] data = tech.transceive(readCmd);
-                    Log.w("myApp", arraytoTag(data));
+                    String response = arraytoTag(data);
+					Log.w("myApp", response);
+					//PluginResult result = new PluginResult(PluginResult.Status.OK, response);
+					//result.setKeepCallback(true);
+					//callbackContext.sendPluginResult(result);
+					
+					this.loadUrl("javascript:cordova.fireDocumentEvent('volumeupbutton');");
+					
                 } catch (IOException e) {
                     e.printStackTrace();
                 } finally {
