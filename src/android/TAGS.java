@@ -68,8 +68,8 @@ public class TAGS extends CordovaPlugin {
 			try {
 				nfcAdapter.disableForegroundDispatch(getActivity());
 			} catch (IllegalStateException e) {
-				// issue 125 - user exits app with back button while nfc
-				Log.w(TAG, "Illegal State Exception stopping NFC. Assuming application is terminating.");
+				
+				Log.w("myApp", "WITHIN CATCH");
 			}
         }
     
