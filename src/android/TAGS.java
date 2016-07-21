@@ -131,7 +131,6 @@ public class TAGS extends CordovaPlugin {
                 try {
                     tech.connect();
                     byte[] data = tech.transceive(readCmd);
-					Log.w("myApp", data.toString());
                     String response = arraytoTag(data);
 					Log.w("myApp", response);
 					//PluginResult result = new PluginResult(PluginResult.Status.OK, response);
@@ -156,8 +155,10 @@ public class TAGS extends CordovaPlugin {
         String tempBuffer="";
         for(int i=0;i<tag.length;i++){
             int temp=(int)tag[i];
-            //if(temp<0){temp=temp+256;}
-            tempBuffer = tempBuffer+Integer.toHexString(temp);
+			Log.w("myApp", temp.toString());
+            if(temp<0){temp=temp+256;}
+            Log.w("myApp", temp.toString());
+			tempBuffer = tempBuffer+Integer.toHexString(temp);
         }
         return Integer.valueOf(tempBuffer,16).toString();
 
