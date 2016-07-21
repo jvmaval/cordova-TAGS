@@ -131,6 +131,7 @@ public class TAGS extends CordovaPlugin {
                 try {
                     tech.connect();
                     byte[] data = tech.transceive(readCmd);
+					Log.w("myApp", data);
                     String response = arraytoTag(data);
 					Log.w("myApp", response);
 					//PluginResult result = new PluginResult(PluginResult.Status.OK, response);
