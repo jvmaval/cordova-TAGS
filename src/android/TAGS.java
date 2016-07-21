@@ -157,9 +157,8 @@ public class TAGS extends CordovaPlugin {
             int temp=(int)tag[i];
             if(temp<0){temp=temp+256;}
 			String tempByte  = Integer.toHexString(temp);
-			if(tempByte.length==1) { tempByte='0'+tempbuffer;}
+			if(tempByte.length==1) { tempByte='0'+tempByte;}
 			tempBuffer = tempBuffer+tempByte;
-			if(tempBuffer.length==1) { tempbuffer='0'+tempbuffer;}
 			Log.w("myApp", tempBuffer);
         }
         return Integer.valueOf(tempBuffer,16).toString();
